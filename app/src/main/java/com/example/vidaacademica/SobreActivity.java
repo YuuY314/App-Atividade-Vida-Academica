@@ -8,6 +8,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.appbar.MaterialToolbar;
+
 public class SobreActivity extends AppCompatActivity {
 
     @Override
@@ -20,5 +22,17 @@ public class SobreActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        MaterialToolbar toolbar = findViewById(R.id.toolbarTop);
+        setSupportActionBar(toolbar);
+
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+    }
+
+    public boolean onSupportNavigateUp(){
+        finish();
+        return true;
     }
 }

@@ -7,4 +7,64 @@
     android:layout_height="match_parent"
     tools:context=".LembretesActivity">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarTop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        app:title="Novo Lembrete"
+        app:titleTextAppearance="@style/toolbarTitleBold"
+        app:titleTextColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ilTituloLembrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Título do lembrete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarTop"
+        app:placeholderText="Dever de casa">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtTituloLembrete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ilDescricaoLembrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Descrição"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ilTituloLembrete"
+        app:placeholderText="Atividade">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtDescricaoLembrete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnSalvarLembrete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="SALVAR"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ilDescricaoLembrete"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

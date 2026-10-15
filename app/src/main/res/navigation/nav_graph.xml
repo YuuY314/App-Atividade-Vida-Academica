@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicio_fragment"
+    >
+
+    <fragment
+        android:id="@+id/inicio_fragment"
+        android:name="com.example.vidaacademica.InicioFragment"
+        android:label="Início"/>
+
+    <fragment
+        android:id="@+id/perfil_fragment"
+        android:name="com.example.vidaacademica.PerfilFragment"
+        android:label="Perfil"/>
+
+    <fragment
+        android:id="@+id/disciplinas_fragment"
+        android:name="com.example.vidaacademica.DisciplinasFragment"
+        android:label="Disciplinas"/>
+
+</navigation>

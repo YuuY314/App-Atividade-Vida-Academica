@@ -1,5 +1,6 @@
 package com.example.vidaacademica;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,7 +60,14 @@ public class InicioFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_inicio, container, false);
+        View view = inflater.inflate(R.layout.fragment_inicio, container, false);
+
+        Button btnNovoLembrete = view.findViewById(R.id.inicio_fragment_btnNovoLembrete);
+        btnNovoLembrete.setOnClickListener(v -> {
+            Intent intent = new Intent(requireContext(), LembretesActivity.class);
+            startActivity(intent);
+        });
+
+        return view;
     }
 }
