@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.google.android.material.appbar.MaterialToolbar;
@@ -40,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
         if(navHostFragment != null){
             androidx.navigation.NavController navController = navHostFragment.getNavController();
             androidx.navigation.ui.NavigationUI.setupWithNavController(bottomNav, navController);
+
+            navController.addOnDestinationChangedListener(
+                    (controller, destination, arguments) -> {
+                        if (destination.getLabel() != null) {
+                            toolbar.setTitle(destination.getLabel());
+                        }
+                    }
+            );
         }
     }
 

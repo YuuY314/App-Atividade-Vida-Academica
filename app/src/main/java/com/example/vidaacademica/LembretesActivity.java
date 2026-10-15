@@ -57,7 +57,7 @@ public class LembretesActivity extends AppCompatActivity {
                     return;
                 }
 
-                Toast.makeText(LembretesActivity.this, "Lembrete Registrado!", Toast.LENGTH_LONG).show();
+                Toast.makeText(LembretesActivity.this, "Lembrete registrado!", Toast.LENGTH_LONG).show();
 
                 finish();
             }
